@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FromeventComponent } from './fromevent/fromevent.component';
+import { IntervalComponent } from './interval/interval.component';
 import { ObservablelistComponent } from './observablelist/observablelist.component';
 
 const routes: Routes = [
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path:'fromevent',
     component:FromeventComponent
+  },
+  {
+    path:'interval',
+    component:IntervalComponent
   }
 ];
 
