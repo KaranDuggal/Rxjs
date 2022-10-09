@@ -9,24 +9,24 @@ import { DesignUtilityService } from 'src/app/services/design-utility/design-uti
 })
 export class IntervalComponent implements OnInit {
   obsMsg:any
-  videoSubscription:Subscription|undefined
+  videoSubscriptionWithInterval:Subscription|undefined
+  videoSubscriptionWithTimer:Subscription|undefined
   constructor(
-    private designingutilityServices:DesignUtilityService
+    private designingUtilityServices:DesignUtilityService
   ) { }
 
   ngOnInit(): void {
-    // const broadCastVideos = interval(2000)
-    // timer(delay,interval)
-    const broadCastVideos = timer(5000,1000)
-
-    this.videoSubscription =  broadCastVideos.subscribe(res=>{
+    const broadCastVideosWithInterval = interval(1000)
+    const broadCastVideosWithTimer = timer(5000,1000) // timer(delay for start subscription,delay in subscription)
+    this.videoSubscriptionWithInterval =  broadCastVideosWithInterval.subscribe(res=>{
       this.obsMsg = 'Video '+res
-      this.designingutilityServices.print(this.obsMsg,"stream")
-      
-      if(res >= 5){
-        this.videoSubscription?.unsubscribe()
-      }
-      
+      this.designingUtilityServices.print(this.obsMsg,"streamWithInterval")
+      if(res >= 5) this.videoSubscriptionWithInterval?.unsubscribe()
+    })
+    this.videoSubscriptionWithTimer =  broadCastVideosWithTimer.subscribe(res=>{
+      this.obsMsg = 'Video '+res
+      this.designingUtilityServices.print(this.obsMsg,"streamWithTimer")
+      if(res >= 5) this.videoSubscriptionWithInterval?.unsubscribe()
     })
   }
 
