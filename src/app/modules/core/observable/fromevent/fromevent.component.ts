@@ -17,10 +17,9 @@ export class FromeventComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {  }
   ngAfterViewInit(){
     fromEvent(this.addBtn?.nativeElement,'click').subscribe(res=>{
-      let click = `duggal ${this.count++}`
-      this._designeUtility.print(click,"elContainer1")
-      this._designeUtility.print(click,"elContainer2")
-
+      let data = `duggal ${this.count++}`
+      this._designeUtility.print(data,"elContainer1")
+      this._designeUtility.print(data,"elContainer2")
     })
   }
   

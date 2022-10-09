@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
 export class DesignUtilityService {
 
   constructor() { }
-  print(event:any,name:any){
+  print(data:any,elementId:any){
     let el = document.createElement('li')
-    el.innerText = event
-    document.getElementById(name)?.appendChild(el)
+    el.innerText = data
+    document.getElementById(elementId)?.appendChild(el)
   }
 }
