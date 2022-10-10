@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CustomObservableComponent } from './custom-observable/custom-observable.component';
 import { FromeventComponent } from './fromevent/fromevent.component';
 import { IntervalComponent } from './interval/interval.component';
 import { ObservablelistComponent } from './observablelist/observablelist.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:'to-array',
     component:ToArrayComponent
+  },
+  {
+    path:'custom-observable',
+    component:CustomObservableComponent
   }
 ];
 

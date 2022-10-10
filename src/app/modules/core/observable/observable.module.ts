@@ -7,10 +7,11 @@ import { FromeventComponent } from './fromevent/fromevent.component';
 import {Router} from '@angular/router';
 import { IntervalComponent } from './interval/interval.component';
 import { OfFromComponent } from './of-from/of-from.component';
-import { ToArrayComponent } from './to-array/to-array.component'
+import { ToArrayComponent } from './to-array/to-array.component';
+import { CustomObservableComponent } from './custom-observable/custom-observable.component'
 
 @NgModule({
-  declarations: [ObservablelistComponent, FromeventComponent, IntervalComponent, OfFromComponent, ToArrayComponent],
+  declarations: [ObservablelistComponent, FromeventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObservableComponent],
   imports: [
     CommonModule,
     ObservableRoutingModule,
