@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CustomObservableComponent } from './custom-observable/custom-observable.component';
+import { FilterComponent } from './filter/filter.component';
 import { FromeventComponent } from './fromevent/fromevent.component';
 import { IntervalComponent } from './interval/interval.component';
 import { MapComponent } from './map/map.component';
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path:'pluck',
     component:PluckComponent
+  },
+  {
+    path:'filter',
+    component:FilterComponent
   },
 ];
 

@@ -10,10 +10,11 @@ import { OfFromComponent } from './of-from/of-from.component';
 import { ToArrayComponent } from './to-array/to-array.component';
 import { CustomObservableComponent } from './custom-observable/custom-observable.component';
 import { MapComponent } from './map/map.component';
-import { PluckComponent } from './pluck/pluck.component'
+import { PluckComponent } from './pluck/pluck.component';
+import { FilterComponent } from './filter/filter.component'
 
 @NgModule({
-  declarations: [ObservablelistComponent, FromeventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObservableComponent, MapComponent, PluckComponent],
+  declarations: [ObservablelistComponent, FromeventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObservableComponent, MapComponent, PluckComponent, FilterComponent],
   imports: [
     CommonModule,
     ObservableRoutingModule,
