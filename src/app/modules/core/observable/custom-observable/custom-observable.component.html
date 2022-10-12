@@ -3,12 +3,9 @@
     <div class="row">
         <div class="col-md-4">
             <div class="card">
-                <div class="card-header">toArray with interval</div>
+                <div class="card-header">Custom observer (manual)</div>
                 <div class="card-body">
-                    <ul class="error" id="toArrayWithInterval">
-                        <li>Karan</li>
-                        <li>duggal</li>
-                        <li>Linux</li>
+                    <ul [ngClass]="customObserverManualStatus ==='Error' ? 'error' : customObserverManualStatus ==='Complete' ? 'complete' : ''" id="customObserverManual">
                     </ul>
                 </div>
             </div>
