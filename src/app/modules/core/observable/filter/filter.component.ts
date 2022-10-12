@@ -11,6 +11,7 @@ export class FilterComponent implements OnInit {
     { 
       id:1,
       name:'Noelle Mccarthy',
+      age:21,
       address:{
         pin:100501,
         city:'Jalandhar'
@@ -19,6 +20,7 @@ export class FilterComponent implements OnInit {
     { 
       id:2,
       name:'Jaida Bass',
+      age:25,
       address:{
         pin:100502,
         city:'Ludhiana'
@@ -27,6 +29,7 @@ export class FilterComponent implements OnInit {
     { 
       id:3,
       name:'Kaleigh Woodward',
+      age:34,
       address:{
         pin:100503,
         city:'Amritsar'
@@ -35,6 +38,7 @@ export class FilterComponent implements OnInit {
     { 
       id:4,
       name:'Lilliana Kaiser',
+      age:29,
       address:{
         pin:100501,
         city:'Patiala'
@@ -43,6 +47,7 @@ export class FilterComponent implements OnInit {
     { 
       id:5,
       name:'Sandra Krause',
+      age:14,
       address:{
         pin:100505,
         city:'Bathinda'
@@ -51,6 +56,7 @@ export class FilterComponent implements OnInit {
     { 
       id:6,
       name:'Susan Ellison',
+      age:21,
       address:{
         pin:100506,
         city:'Hoshiarpur'
@@ -59,6 +65,7 @@ export class FilterComponent implements OnInit {
     { 
       id:7,
       name:'Branden Graham',
+      age:42,
       address:{
         pin:100507,
         city:'Moga'
@@ -67,6 +74,7 @@ export class FilterComponent implements OnInit {
     { 
       id:8,
       name:'Jane Torres',
+      age:52,
       address:{
         pin:100508,
         city:'Abohar'
@@ -75,6 +83,7 @@ export class FilterComponent implements OnInit {
     { 
       id:9,
       name:'Jamarion Lutz',
+      age:47,
       address:{
         pin:100509,
         city:'Khanna'
