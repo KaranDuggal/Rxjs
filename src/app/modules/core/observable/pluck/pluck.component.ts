@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
+import { pluck } from 'rxjs/operators';
+import { DesignUtilityService } from 'src/app/services/design-utility/design-utility.service';
 
 @Component({
   selector: 'app-pluck',
@@ -81,9 +84,21 @@ export class PluckComponent implements OnInit {
       }
     },
   ]
-  constructor() { }
+  constructor(
+    private designUtilityService:DesignUtilityService
+  ) { }
 
   ngOnInit(): void {
+    from(this.member).pipe(
+      pluck('name')
+    ).subscribe(res=>{
+      this.designUtilityService.print(res,'pluckPropertyName')
+    })
+    from(this.member).pipe(
+      pluck('address','city')
+    ).subscribe(res=>{
+      this.designUtilityService.print(res,'pluckNestedPropertyName')
+    })
   }
 
 }
