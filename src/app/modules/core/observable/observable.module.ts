@@ -8,10 +8,11 @@ import {Router} from '@angular/router';
 import { IntervalComponent } from './interval/interval.component';
 import { OfFromComponent } from './of-from/of-from.component';
 import { ToArrayComponent } from './to-array/to-array.component';
-import { CustomObservableComponent } from './custom-observable/custom-observable.component'
+import { CustomObservableComponent } from './custom-observable/custom-observable.component';
+import { MapComponent } from './map/map.component'
 
 @NgModule({
-  declarations: [ObservablelistComponent, FromeventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObservableComponent],
+  declarations: [ObservablelistComponent, FromeventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObservableComponent, MapComponent],
   imports: [
     CommonModule,
     ObservableRoutingModule,

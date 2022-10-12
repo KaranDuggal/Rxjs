@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CustomObservableComponent } from './custom-observable/custom-observable.component';
 import { FromeventComponent } from './fromevent/fromevent.component';
 import { IntervalComponent } from './interval/interval.component';
+import { MapComponent } from './map/map.component';
 import { ObservablelistComponent } from './observablelist/observablelist.component';
 import { OfFromComponent } from './of-from/of-from.component';
 import { ToArrayComponent } from './to-array/to-array.component';
@@ -31,7 +32,11 @@ const routes: Routes = [
   {
     path:'custom-observable',
     component:CustomObservableComponent
-  }
+  },
+  {
+    path:'map',
+    component:MapComponent
+  },
 ];
 
 @NgModule({
