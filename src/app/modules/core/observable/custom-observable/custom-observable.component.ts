@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
 import { DesignUtilityService } from 'src/app/services/design-utility/design-utility.service';
 
 @Component({
@@ -7,8 +7,10 @@ import { DesignUtilityService } from 'src/app/services/design-utility/design-uti
   templateUrl: './custom-observable.component.html',
   styleUrls: ['./custom-observable.component.scss']
 })
-export class CustomObservableComponent implements OnInit {
+export class CustomObservableComponent implements OnInit, OnDestroy {
   customObserverManualStatus:'Error'|'Complete'|undefined
+  customObserverIntervalStatus:'Error'|'Complete'|undefined
+  sub2:Subscription|undefined
   constructor(
     private designUtilityService: DesignUtilityService
   ) { }
@@ -37,6 +39,24 @@ export class CustomObservableComponent implements OnInit {
     },()=>{
       this.customObserverManualStatus = 'Complete'
     })
+    const cusObs2 = Observable.create((observer:any)=>{
+      let count = 1
+      setInterval(()=>{
+        observer.next('Data emit '+count)
+        if(count === 5) observer.complete()
+        // if(count === 4) observer.error('error hai')
+        count++
+      },1000)
+    })
+    this.sub2 = cusObs2.subscribe((res:any)=>{
+      this.designUtilityService.print(res,'customObserverInterval')
+    },()=>{
+      this.customObserverIntervalStatus='Error'
+    },()=>{
+      this.customObserverIntervalStatus='Complete'
+    })
   }
-
+  ngOnDestroy(): void {
+    this.sub2?.unsubscribe()
+  }
 }
