@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { from, pipe } from 'rxjs';
+import { filter, pluck } from 'rxjs/operators';
+import { DesignUtilityService } from 'src/app/services/design-utility/design-utility.service';
 
 @Component({
   selector: 'app-filter',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterComponent implements OnInit {
 
-  member = [
+  members = [
     { 
       id:1,
       name:'Noelle Mccarthy',
@@ -90,9 +93,17 @@ export class FilterComponent implements OnInit {
       }
     },
   ]
-  constructor() { }
+  constructor(
+    private designUtilityService:DesignUtilityService
+  ) { }
 
   ngOnInit(): void {
+    from(this.members).pipe(
+      filter(member => member.age > 25),
+      pluck('age')
+    ).subscribe(res=>{
+      this.designUtilityService.print(res,'filterByAge')
+    })
   }
 
 }
