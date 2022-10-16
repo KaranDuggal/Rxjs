@@ -8,6 +8,7 @@ import { MapComponent } from './map/map.component';
 import { ObservablelistComponent } from './observablelist/observablelist.component';
 import { OfFromComponent } from './of-from/of-from.component';
 import { PluckComponent } from './pluck/pluck.component';
+import { TakeComponent } from './take/take.component';
 import { TapComponent } from './tap/tap.component';
 import { ToArrayComponent } from './to-array/to-array.component';
 
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path:'tap',
     component:TapComponent
+  },
+  {
+    path:'take',
+    component:TakeComponent
   },
 ];
 
