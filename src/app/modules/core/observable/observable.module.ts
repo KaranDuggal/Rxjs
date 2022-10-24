@@ -16,12 +16,16 @@ import { TapComponent } from './tap/tap.component';
 import { TakeComponent } from './take/take.component';
 import { RetryComponent } from './retry/retry.component';
 import { DebounceTimeAndDistinctUntilChangedComponent } from './debounce-time-and-distinct-until-changed/debounce-time-and-distinct-until-changed.component'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [ObservablelistComponent, FromeventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObservableComponent, MapComponent, PluckComponent, FilterComponent, TapComponent, TakeComponent, RetryComponent, DebounceTimeAndDistinctUntilChangedComponent],
   imports: [
     CommonModule,
     ObservableRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ObservableModule { }
