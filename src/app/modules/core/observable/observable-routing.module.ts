@@ -10,6 +10,7 @@ import { ObservablelistComponent } from './observablelist/observablelist.compone
 import { OfFromComponent } from './of-from/of-from.component';
 import { PluckComponent } from './pluck/pluck.component';
 import { RetryComponent } from './retry/retry.component';
+import { SubjectComponent } from './subject/subject.component';
 import { TakeComponent } from './take/take.component';
 import { TapComponent } from './tap/tap.component';
 import { ToArrayComponent } from './to-array/to-array.component';
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path:'debounceTimeAndDistinctUntilChanged',
     component:DebounceTimeAndDistinctUntilChangedComponent
+  },
+  {
+    path:'subject',
+    component:SubjectComponent
   },
 ];
 
