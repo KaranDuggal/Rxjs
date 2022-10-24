@@ -18,10 +18,11 @@ import { RetryComponent } from './retry/retry.component';
 import { DebounceTimeAndDistinctUntilChangedComponent } from './debounce-time-and-distinct-until-changed/debounce-time-and-distinct-until-changed.component'
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SubjectComponent } from './subject/subject.component';
+import { ReplayComponent } from './replay/replay.component';
 
 
 @NgModule({
-  declarations: [ObservablelistComponent, FromeventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObservableComponent, MapComponent, PluckComponent, FilterComponent, TapComponent, TakeComponent, RetryComponent, DebounceTimeAndDistinctUntilChangedComponent, SubjectComponent],
+  declarations: [ObservablelistComponent, FromeventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObservableComponent, MapComponent, PluckComponent, FilterComponent, TapComponent, TakeComponent, RetryComponent, DebounceTimeAndDistinctUntilChangedComponent, SubjectComponent, ReplayComponent],
   imports: [
     CommonModule,
     ObservableRoutingModule,

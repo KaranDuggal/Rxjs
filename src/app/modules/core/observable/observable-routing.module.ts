@@ -9,6 +9,7 @@ import { MapComponent } from './map/map.component';
 import { ObservablelistComponent } from './observablelist/observablelist.component';
 import { OfFromComponent } from './of-from/of-from.component';
 import { PluckComponent } from './pluck/pluck.component';
+import { ReplayComponent } from './replay/replay.component';
 import { RetryComponent } from './retry/retry.component';
 import { SubjectComponent } from './subject/subject.component';
 import { TakeComponent } from './take/take.component';
@@ -71,6 +72,10 @@ const routes: Routes = [
   {
     path:'subject',
     component:SubjectComponent
+  },
+  {
+    path:'replay',
+    component:ReplayComponent
   },
 ];
 
