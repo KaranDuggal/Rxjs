@@ -1,12 +1,32 @@
 <div>
-    <h1>Take, TakeLast and TakeUntil</h1> <br>
+    <h1>Retry, RetryWhen, Scan and Delay</h1> <br>
     <div class="row">
         <div class="col-md-4">
             <div class="card">
-                <div class="card-header">Take property name</div>
+                <div class="card-header">Data</div>
                 <div class="card-body">
-                    <ul id="take">
-                    </ul>
+                    <table class="table">
+                        <tr>
+                            <th>Title</th>
+                            <td>{{todo?.title}}</td>
+                        </tr>
+                        <tr>
+                            <th>isCompleted</th>
+                            <td>{{todo?.completed}}</td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <!-- <button class="btn btn-primary" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        <span class="sr-only">Loading...</span>
+                    </button> -->
+                    <button [ngClass]="isError ? 'btn btn-danger' : 'btn btn-primary'" type="button" (click)="fetchDetails()">
+                      <span class="spinner-border spinner-border-sm" *ngIf="isLoaderShow"></span>
+                      {{status}}
+                    </button>
                 </div>
             </div>
         </div>
