@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CustomObservableComponent } from './custom-observable/custom-observable.component';
+import { DebounceTimeAndDistinctUntilChangedComponent } from './debounce-time-and-distinct-until-changed/debounce-time-and-distinct-until-changed.component';
 import { FilterComponent } from './filter/filter.component';
 import { FromeventComponent } from './fromevent/fromevent.component';
 import { IntervalComponent } from './interval/interval.component';
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path:'retry',
     component:RetryComponent
+  },
+  {
+    path:'debounceTimeAndDistinctUntilChanged',
+    component:DebounceTimeAndDistinctUntilChangedComponent
   },
 ];
 
