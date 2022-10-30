@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AsyncSubjectComponent } from './async-subject/async-subject.component';
 import { CustomObservableComponent } from './custom-observable/custom-observable.component';
 import { DebounceTimeAndDistinctUntilChangedComponent } from './debounce-time-and-distinct-until-changed/debounce-time-and-distinct-until-changed.component';
 import { FilterComponent } from './filter/filter.component';
@@ -76,6 +77,10 @@ const routes: Routes = [
   {
     path:'replay',
     component:ReplayComponent
+  },
+  {
+    path:'async-subject',
+    component:AsyncSubjectComponent
   },
 ];
 
