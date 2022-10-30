@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AsyncSubjectComponent } from './async-subject/async-subject.component';
+import { ConcatComponent } from './concat/concat.component';
 import { CustomObservableComponent } from './custom-observable/custom-observable.component';
 import { DebounceTimeAndDistinctUntilChangedComponent } from './debounce-time-and-distinct-until-changed/debounce-time-and-distinct-until-changed.component';
 import { FilterComponent } from './filter/filter.component';
 import { FromeventComponent } from './fromevent/fromevent.component';
 import { IntervalComponent } from './interval/interval.component';
 import { MapComponent } from './map/map.component';
+import { MergeComponent } from './merge/merge.component';
 import { ObservablelistComponent } from './observablelist/observablelist.component';
 import { OfFromComponent } from './of-from/of-from.component';
 import { PluckComponent } from './pluck/pluck.component';
@@ -81,6 +83,14 @@ const routes: Routes = [
   {
     path:'async-subject',
     component:AsyncSubjectComponent
+  },
+  {
+    path:'concat',
+    component:ConcatComponent
+  },
+  {
+    path:'merge',
+    component:MergeComponent
   },
 ];
 
