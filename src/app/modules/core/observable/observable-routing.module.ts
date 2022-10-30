@@ -8,6 +8,7 @@ import { FilterComponent } from './filter/filter.component';
 import { FromeventComponent } from './fromevent/fromevent.component';
 import { IntervalComponent } from './interval/interval.component';
 import { MapComponent } from './map/map.component';
+import { MergeMapComponent } from './merge-map/merge-map.component';
 import { MergeComponent } from './merge/merge.component';
 import { ObservablelistComponent } from './observablelist/observablelist.component';
 import { OfFromComponent } from './of-from/of-from.component';
@@ -91,6 +92,10 @@ const routes: Routes = [
   {
     path:'merge',
     component:MergeComponent
+  },
+  {
+    path:'merge-map',
+    component:MergeMapComponent
   },
 ];
 

@@ -22,10 +22,11 @@ import { ReplayComponent } from './replay/replay.component';
 import { AsyncSubjectComponent } from './async-subject/async-subject.component';
 import { ConcatComponent } from './concat/concat.component';
 import { MergeComponent } from './merge/merge.component';
+import { MergeMapComponent } from './merge-map/merge-map.component';
 
 
 @NgModule({
-  declarations: [ObservablelistComponent, FromeventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObservableComponent, MapComponent, PluckComponent, FilterComponent, TapComponent, TakeComponent, RetryComponent, DebounceTimeAndDistinctUntilChangedComponent, SubjectComponent, ReplayComponent, AsyncSubjectComponent, ConcatComponent, MergeComponent],
+  declarations: [ObservablelistComponent, FromeventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObservableComponent, MapComponent, PluckComponent, FilterComponent, TapComponent, TakeComponent, RetryComponent, DebounceTimeAndDistinctUntilChangedComponent, SubjectComponent, ReplayComponent, AsyncSubjectComponent, ConcatComponent, MergeComponent, MergeMapComponent],
   imports: [
     CommonModule,
     ObservableRoutingModule,
