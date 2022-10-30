@@ -20,10 +20,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SubjectComponent } from './subject/subject.component';
 import { ReplayComponent } from './replay/replay.component';
 import { AsyncSubjectComponent } from './async-subject/async-subject.component';
+import { ConcatComponent } from './concat/concat.component';
+import { MergeComponent } from './merge/merge.component';
 
 
 @NgModule({
-  declarations: [ObservablelistComponent, FromeventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObservableComponent, MapComponent, PluckComponent, FilterComponent, TapComponent, TakeComponent, RetryComponent, DebounceTimeAndDistinctUntilChangedComponent, SubjectComponent, ReplayComponent, AsyncSubjectComponent],
+  declarations: [ObservablelistComponent, FromeventComponent, IntervalComponent, OfFromComponent, ToArrayComponent, CustomObservableComponent, MapComponent, PluckComponent, FilterComponent, TapComponent, TakeComponent, RetryComponent, DebounceTimeAndDistinctUntilChangedComponent, SubjectComponent, ReplayComponent, AsyncSubjectComponent, ConcatComponent, MergeComponent],
   imports: [
     CommonModule,
     ObservableRoutingModule,
