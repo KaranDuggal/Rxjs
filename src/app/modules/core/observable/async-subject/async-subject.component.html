@@ -1,1 +1,31 @@
-<p>async-subject works!</p>
+<div class="my-3">
+    <div class="row">
+        <div class="col">
+            <h3>Async Subject</h3>
+        </div>
+    </div>
+    <hr>
+    <div class="row justify-content-center">
+        <div class="col-md-3">
+            <input type="text" class="form-control" placeholder="Add video" [formControl]="addVideo" (keydown.enter)="addVideoFun()">
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-success" (click)="addVideoFun()">Add video</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <strong>User - 01</strong>
+            <hr>
+            <ul class="video-list">
+                <li ><strong>Video : </strong>{{asyncVideoEmit}}</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <strong>Click ToComplete Subscription</strong>
+            <hr>
+            <button class="btn btn-success" (click)="onCompleteSub()">Complete subscription</button>
+        </div>
+    </div>
+</div>
