@@ -1,1 +1,44 @@
-<p>replay works!</p>
+<div class="my-3">
+    <div class="row">
+        <div class="col">
+            <h3>Add video</h3>
+        </div>
+    </div>
+    <hr>
+    <div class="row justify-content-center">
+        <div class="col-md-3">
+            <input type="text" class="form-control" [formControl]="addVideo" (keydown.enter)="addVideoFun()">
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-success" (click)="addVideoFun()">Add video</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <strong>User - 01</strong>
+            <hr>
+            <ul class="video-list">
+                <li *ngFor="let data of user1List.reverse()"><strong>Video : </strong>{{data}}</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <strong>User - 02</strong>
+            <hr>
+            <ul class="video-list">
+                <li *ngFor="let data of user2List.reverse()"><strong>Video : </strong>{{data}}</li>
+            </ul>
+            <hr>
+            <div class="btn btn-primary" [ngClass]="isUser2Subscribe ? 'btn-danger' : 'btn-primary'" (click)="user2subscribe()">{{isUser2Subscribe ? 'Unsubscribe' : 'Subscribe'}}</div>
+        </div>
+        <div class="col-md-4">
+            <strong>User - 03</strong>
+            <hr>
+            <ul class="video-list">
+                <li *ngFor="let data of user3List.reverse()"><strong>Video : </strong>{{data}}</li>
+            </ul>
+            <hr>
+            <div class="btn" [ngClass]="isUser3Subscribe ? 'btn-danger' : 'btn-primary'" (click)="user3subscribe()">{{isUser3Subscribe ? 'Unsubscribe' : 'Subscribe'}}</div>
+        </div>
+    </div>
+</div>
