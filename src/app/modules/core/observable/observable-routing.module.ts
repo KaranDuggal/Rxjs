@@ -17,6 +17,7 @@ import { PluckComponent } from './pluck/pluck.component';
 import { ReplayComponent } from './replay/replay.component';
 import { RetryComponent } from './retry/retry.component';
 import { SubjectComponent } from './subject/subject.component';
+import { SwitchMapComponent } from './switch-map/switch-map.component';
 import { TakeComponent } from './take/take.component';
 import { TapComponent } from './tap/tap.component';
 import { ToArrayComponent } from './to-array/to-array.component';
@@ -101,6 +102,10 @@ const routes: Routes = [
   {
     path:'concat-map',
     component:ConcatMapComponent
+  },
+  {
+    path:'switch-map',
+    component:SwitchMapComponent
   },
 ];
 
