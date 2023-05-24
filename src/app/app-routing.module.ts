@@ -10,6 +10,10 @@ const routes: Routes = [
     path:'observable',
     loadChildren:()=>import('./modules/core/observable/observable.module').then(mod=>mod.ObservableModule)
   },
+  {
+    path:'life-cycle-hook',
+    loadChildren:()=>import('./modules/core/life-cycle-hook/life-cycle-hook.module').then(mod=>mod.LifeCycleHookModule)
+  },
 ];
 
 @NgModule({
