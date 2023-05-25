@@ -8,11 +8,12 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 export class ChildComponent implements OnInit, OnChanges {
   @Input() input_1:string = ''
   @Input() counter!:number
-  constructor() { }
+  constructor() { 
+    console.log('child comp constructor');
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('child changes obj', changes)
-    console.log('child comp OnChanges');
+    console.log('child comp OnChanges',changes);
   }
 
   ngOnInit(): void {
