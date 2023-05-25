@@ -7,11 +7,12 @@ import { UserComponent } from '../user/user.component';
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.scss']
 })
-export class ChildComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit {
+export class ChildComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterContentChecked {
   @ContentChild(UserComponent) userComp! :UserComponent;
   @Input() input_1:string = ''
   @Input() counter!:number
   @Input() user!:UserModel
+  childCounter:number = 0
   constructor() { 
     console.log('child comp constructor');
   }
@@ -38,5 +39,12 @@ export class ChildComponent implements OnInit, OnChanges, DoCheck, AfterContentI
 
   ngAfterViewInit(): void {
     console.log('child comp AfterViewInit');
+  }
+
+  ngAfterViewChecked(): void {
+    console.log('child comp AfterViewChecked');
+  }
+  increaseCounter(){
+    this.childCounter++
   }
 }

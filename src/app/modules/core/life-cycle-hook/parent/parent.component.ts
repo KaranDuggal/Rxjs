@@ -1,16 +1,18 @@
-import { AfterContentChecked, AfterContentInit, AfterViewInit, Component, DoCheck, ElementRef, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, ElementRef, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { UserModel } from '../user.model';
+import { ChildComponent } from '../child/child.component';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.scss']
 })
-export class ParentComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit {
+export class ParentComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
   input_1 :string = 'input from parent'
   counter:number = 0
   user:UserModel = {id:1,name:'karan'}
   @ViewChild('btnCounter') btnCounter!:ElementRef
+  @ViewChild(ChildComponent) childCom!:ChildComponent
   constructor() { 
     /* 
       Injecting any services
@@ -51,5 +53,9 @@ export class ParentComponent implements OnInit, OnChanges, DoCheck, AfterContent
   ngAfterViewInit(): void {
     this.btnCounter.nativeElement.innerHTML = 'Updates text'
     console.log('parent comp AfterViewInit',this.btnCounter);
+  }
+
+  ngAfterViewChecked(): void {
+    console.log('parent comp AfterViewChecked', this.childCom.childCounter);
   }
 }
