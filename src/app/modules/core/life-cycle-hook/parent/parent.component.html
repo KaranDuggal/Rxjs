@@ -1,4 +1,6 @@
 <p>parent works!</p>
 <input type="text" placeholder="parent input field" [(ngModel)]="input_1">
-<button (click)="countIncrement()">Parent count increment</button>
-<app-child [input_1]="input_1" [counter]="counter" [user]="user"></app-child>
+<button (click)="countIncrement()" #btnCounter>Parent count increment</button>
+<app-child [input_1]="input_1" [counter]="counter" [user]="user">
+    <app-user [userName]="'input_1'"></app-user>
+</app-child>

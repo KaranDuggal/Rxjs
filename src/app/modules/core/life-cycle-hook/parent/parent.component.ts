@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewInit, Component, DoCheck, ElementRef, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { UserModel } from '../user.model';
 
 @Component({
@@ -6,10 +6,11 @@ import { UserModel } from '../user.model';
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.scss']
 })
-export class ParentComponent implements OnInit, OnChanges, DoCheck {
+export class ParentComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit {
   input_1 :string = 'input from parent'
   counter:number = 0
   user:UserModel = {id:1,name:'karan'}
+  @ViewChild('btnCounter') btnCounter!:ElementRef
   constructor() { 
     /* 
       Injecting any services
@@ -23,6 +24,7 @@ export class ParentComponent implements OnInit, OnChanges, DoCheck {
   }
 
   ngOnInit(): void {
+  console.log('btnCounter', this.btnCounter)
     /* 
       Perform the component specific operation Like:
         Making call to the API for page load
@@ -38,4 +40,16 @@ export class ParentComponent implements OnInit, OnChanges, DoCheck {
     this.user.name = 'Karan Duggal'
   }
 
+  ngAfterContentInit(): void {
+    console.log('parent comp AfterContentInit');
+  }
+
+  ngAfterContentChecked(): void {
+    console.log('parent comp AfterContentChecked');
+  }
+
+  ngAfterViewInit(): void {
+    console.log('btnCounter', this.btnCounter)
+    console.log('parent comp AfterViewInit');
+  }
 }
