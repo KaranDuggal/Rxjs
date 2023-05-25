@@ -6,8 +6,8 @@ import { Component, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular
   styleUrls: ['./parent.component.scss']
 })
 export class ParentComponent implements OnInit, OnChanges {
-
-  @ViewChild('text') text:string = ''
+  input_1 :string = 'input from parent'
+  counter:number = 0
   constructor() { }
   ngOnChanges(changes: SimpleChanges): void {
     console.log('parent comp OnChanges');
@@ -16,6 +16,9 @@ export class ParentComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     console.log('parent comp OnInit');
     
+  }
+  countIncrement(){
+    this.counter++
   }
 
 }
