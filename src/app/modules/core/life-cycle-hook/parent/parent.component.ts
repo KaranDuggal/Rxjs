@@ -49,7 +49,7 @@ export class ParentComponent implements OnInit, OnChanges, DoCheck, AfterContent
   }
 
   ngAfterViewInit(): void {
-    console.log('btnCounter', this.btnCounter)
-    console.log('parent comp AfterViewInit');
+    this.btnCounter.nativeElement.innerHTML = 'Updates text'
+    console.log('parent comp AfterViewInit',this.btnCounter);
   }
 }
