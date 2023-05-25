@@ -1,13 +1,15 @@
-import { Component, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, DoCheck, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { UserModel } from '../user.model';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.scss']
 })
-export class ParentComponent implements OnInit, OnChanges {
+export class ParentComponent implements OnInit, OnChanges, DoCheck {
   input_1 :string = 'input from parent'
   counter:number = 0
+  user:UserModel = {id:1,name:'karan'}
   constructor() { 
     /* 
       Injecting any services
@@ -28,8 +30,12 @@ export class ParentComponent implements OnInit, OnChanges {
     */
     console.log('parent comp OnInit');
   }
+  ngDoCheck(): void {
+    console.log('parent comp DoCheck');
+  }
   countIncrement(){
     this.counter++
+    this.user.name = 'Karan Duggal'
   }
 
 }
