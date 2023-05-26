@@ -16,7 +16,7 @@ export class OfFromComponent implements OnInit {
   ngOnInit(): void {
 
     // of
-    const obs1  = of('duggal','karan','karan'); 
+    const obs1  = of('duggal','karan','umesh'); 
     obs1.subscribe(res=>{
       this.designUtilityService.print(res,'of')  
     })
@@ -28,7 +28,7 @@ export class OfFromComponent implements OnInit {
     // from
     const obs3  = from(['duggal','karan','karan']); 
     obs3.subscribe(res=>{
-       this.designUtilityService.print(res,'fromArray')  
+      this.designUtilityService.print(res,'fromArray')  
     })
     // from - Promise
     const promise = new Promise(resolve=>{
@@ -38,12 +38,12 @@ export class OfFromComponent implements OnInit {
     })    
     const obs4  = from(promise); 
     obs4.subscribe(res=>{
-       this.designUtilityService.print(res,'Promise')  
+      this.designUtilityService.print(res,'Promise')  
     })
     // from ( string to observable )
     const obs5  = from('Anguler tutorial on uxtrens'); 
     obs5.subscribe(res=>{
-       this.designUtilityService.print(res,'String')  
+      this.designUtilityService.print(res,'String')  
     })
   }
 
