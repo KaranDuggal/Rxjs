@@ -9,8 +9,8 @@ import { DesignUtilityService } from 'src/app/services/design-utility/design-uti
 })
 export class IntervalComponent implements OnInit {
   obsMsg:any
-  videoSubscriptionWithInterval:Subscription|undefined
-  videoSubscriptionWithTimer:Subscription|undefined
+  videoSubscriptionWithInterval!:Subscription
+  videoSubscriptionWithTimer!:Subscription
   constructor(
     private designingUtilityServices:DesignUtilityService
   ) { }
@@ -26,7 +26,7 @@ export class IntervalComponent implements OnInit {
     this.videoSubscriptionWithTimer =  broadCastVideosWithTimer.subscribe(res=>{
       this.obsMsg = 'Video '+res
       this.designingUtilityServices.print(this.obsMsg,"streamWithTimer")
-      if(res >= 5) this.videoSubscriptionWithInterval?.unsubscribe()
+      if(res >= 5) this.videoSubscriptionWithTimer?.unsubscribe()
     })
   }
 
