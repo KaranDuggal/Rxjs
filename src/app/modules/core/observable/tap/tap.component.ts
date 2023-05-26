@@ -9,7 +9,8 @@ import { DesignUtilityService } from 'src/app/services/design-utility/design-uti
   styleUrls: ['./tap.component.scss']
 })
 export class TapComponent implements OnInit {
-  obsSubscription:Subscription|undefined
+  obsSubscription!:Subscription
+  obsSubscription2!:Subscription
   myColor:string = ''
   constructor(
     private designUtilityService:DesignUtilityService
@@ -20,7 +21,7 @@ export class TapComponent implements OnInit {
 
     this.obsSubscription = interval(1000).pipe(
       tap(data =>{
-        // if(data === 4) this.obsSubscription?.unsubscribe()
+        if(data === 4) this.obsSubscription?.unsubscribe()
       }),
       map(data=>{
         // if(data === 4) this.obsSubscription?.unsubscribe()
@@ -32,10 +33,10 @@ export class TapComponent implements OnInit {
     })
 
     const colorArr = ['aqua' ,'red' ,'gray' ,'green' ,'greenyellow' ,'palevioletred' ,'blue' ,'blueviolet' ,'burlywood']
-    this.obsSubscription = interval(1000).pipe(
+    this.obsSubscription2 = interval(1000).pipe(
       tap(data =>{
         this.myColor = colorArr[data]
-        // if(data === colorArr.length - 1) this.obsSubscription?.unsubscribe()
+        if(data === colorArr.length - 1) this.obsSubscription2?.unsubscribe()
       }),
       map(data=>colorArr[data]),
       take(colorArr.length)
