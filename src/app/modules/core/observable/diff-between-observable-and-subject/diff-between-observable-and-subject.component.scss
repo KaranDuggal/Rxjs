@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Add this line to center the container vertically */
+    height: 100vh;
+    /* Adjust the height to cover the entire viewport */
+}
+
+/* Rest of the CSS remains the same */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin: 5px;
+}
+
+.left {
+    margin-right: 10px;
+}
+
+.btn {
+    width: 400px;
+    height: 200;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.btn-dark {
+    background-color: #333;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+}

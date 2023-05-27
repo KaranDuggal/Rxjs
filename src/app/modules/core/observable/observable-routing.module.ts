@@ -21,6 +21,7 @@ import { SwitchMapComponent } from './switch-map/switch-map.component';
 import { TakeComponent } from './take/take.component';
 import { TapComponent } from './tap/tap.component';
 import { ToArrayComponent } from './to-array/to-array.component';
+import { DiffBetweenObservableAndSubjectComponent } from './diff-between-observable-and-subject/diff-between-observable-and-subject.component';
 
 const routes: Routes = [
   {
@@ -78,6 +79,10 @@ const routes: Routes = [
   {
     path:'subject',
     component:SubjectComponent
+  },
+  {
+    path:'diff-between-observable-and-subject',
+    component:DiffBetweenObservableAndSubjectComponent
   },
   {
     path:'replay',

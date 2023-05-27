@@ -1,1 +1,20 @@
-<p>diff-between-observable-and-subject works!</p>
+<div class="container">
+    <div class="btn-container">
+        <div class="section left">
+            <button class="btn btn-dark" (click)="setObserverData()">Get observer data</button>
+        </div>
+        <div class="section">
+            <button class="btn btn-dark" (click)="setSubjectData()">Get subject data</button>
+        </div>
+    </div>
+    <div class="text-container">
+        <div class="section left">
+            <div>{{observerData1}} | {{observerData2}}</div>
+        </div>
+    </div>
+    <div class="text-container">
+        <div class="section">
+            <div>{{subjectData1}} | {{subjectData2}}</div>
+        </div>
+    </div>
+</div>
